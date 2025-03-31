@@ -35,10 +35,8 @@ class SolicitudesResponse(BaseModel):
     solicitudes: List[dict]
     conversaciones_activas: List[dict]
 
-# FastAPI app setup
 app = FastAPI(debug=True)
 
-# CORS configuration
 origins = [
     "http://localhost:5173",
 ]
@@ -51,13 +49,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# In-memory database
+
 memory_db = {
     "messages": [],
     "calls": []
 }
 
-# Global variable to store the current user
 current_user: Optional[CurrentUser] = None
 
 # Endpoints
@@ -145,6 +142,6 @@ def get_current_user():
         raise HTTPException(status_code=404, detail="No current user set")
     return current_user
 
-# Run the FastAPI app
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
