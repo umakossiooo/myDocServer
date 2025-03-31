@@ -1,0 +1,78 @@
+### Get Current User
+GET http://localhost:8000/current_user
+Content-Type: application/json
+
+###
+
+### Set Current User
+POST http://localhost:8000/current_user
+Content-Type: application/json
+
+{
+  "name": "Dr. Smith",
+  "phone": "+52 987-654-3210",
+  "email": "drsmith@example.com"
+}
+
+###
+
+### Get All Messages
+GET http://localhost:8000/messages
+Content-Type: application/json
+
+###
+
+### Add a New Message
+POST http://localhost:8000/messages
+Content-Type: application/json
+
+{
+  "name": "Uma Kossio",
+  "phone": "+52 123-456-7890",
+  "content": "Hello, how are you?",
+  "status": "pending",
+  "timestamp": "2025-03-30T10:00:00"
+}
+
+###
+
+### Update Message Status
+PUT http://localhost:8000/messages/1
+Content-Type: application/json
+
+{
+  "status": "accepted"
+}
+
+###
+### Get All Calls
+GET http://localhost:8000/calls
+Content-Type: application/json
+
+###
+
+### Add a New Call
+POST http://localhost:8000/calls
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "phone": "+52 987-654-3210",
+  "timestamp": "2025-03-30T10:05:00",
+  "status": "pending"
+}
+
+###
+
+### Update Call Status
+PUT http://localhost:8000/calls/1
+Content-Type: application/json
+
+{
+  "status": "accepted"
+}
+
+###
+### Get Solicitudes and Conversaciones Activas
+GET http://localhost:8000/solicitudes
+Content-Type: application/json
