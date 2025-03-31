@@ -34,15 +34,6 @@ Content-Type: application/json
   "timestamp": "2025-03-30T10:00:00"
 }
 
-###
-
-### Update Message Status
-PUT http://localhost:8000/messages/1
-Content-Type: application/json
-
-{
-  "status": "accepted"
-}
 
 ###
 ### Get All Calls
@@ -60,16 +51,6 @@ Content-Type: application/json
   "phone": "+52 987-654-3210",
   "timestamp": "2025-03-30T10:05:00",
   "status": "pending"
-}
-
-###
-
-### Update Call Status
-PUT http://localhost:8000/calls/1
-Content-Type: application/json
-
-{
-  "status": "accepted"
 }
 
 ###
